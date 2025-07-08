@@ -16,17 +16,19 @@ __version__ = "0.0.1"
 __author__="Maria Eduarda Oliveira"
 import os
 
-current_language= os.getenv("LANG")[:5]
+current_language = os.getenv("LANG", "en_US")[:5]
 
-mensagem = "Hello world!"
+mensagem = {
+    "en_US": "Hello, World!",
+    "pt_BR":"Ola, Mundo!",
+    "it_IT":"Ciao, Mondo!",
+    "es_SP":"Hola, Mundo",
+    "fr_FR":"Bonjour, Monde"
 
-if current_language == "pt_BR" :
-    mensagem= "Ola mundo!"
-elif current_language =="it_IT":        
-    mensagem = "Ciao, Mondo!"
+}
 
 
-print(mensagem)
+print(mensagem[current_language])
 
 
 

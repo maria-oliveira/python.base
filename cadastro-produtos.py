@@ -29,7 +29,7 @@ compra ={
 totalCompra = compra["quantidade"] *compra["produto"]["preco"]
 
 print(
-    f"{compra [ 'cliente' ] [ 'nome' ]}"
-    f" comprou {compra ['quantidade'] } unidades de  {compra ['produto'] ['nome']}"
-    f" e pagou o total de {totalCompra}."
+    f"{compra['cliente']['nome']}"
+    f"comprou {compra['produto']['nome']}"
+    f"E pagou o total de {totalCompra}"
 )
